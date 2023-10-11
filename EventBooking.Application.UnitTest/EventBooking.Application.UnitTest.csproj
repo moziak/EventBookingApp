@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Moq" Version="4.20.69" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Events\" />
+    <None Remove="Events\Commands\" />
+    <None Remove="Events\Commands\CreateEvent\" />
+    <None Remove="Events\Commands\TestUtils\" />
+    <None Remove="TestUtils\" />
+    <None Remove="TestUtils\Constants\" />
+    <None Remove="Events\Querries\" />
+    <None Remove="Events\Querries\GetEventById\" />
+    <None Remove="TestUtils\Models\" />
+    <None Remove="Events\Commands\UpdateEvent\" />
+    <None Remove="Events\Commands\CreateEvent\TestUtils\" />
+    <None Remove="Events\Commands\UpdateEvent\TestUtils\" />
+    <None Remove="Events\Commands\DeleteEvent\" />
+    <None Remove="Events\Commands\DeleteEvent\TestUtils\" />
+    <None Remove="Events\Querries\GetAllEvents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Events\Commands\" />
+    <Folder Include="Events\Commands\CreateEvent\" />
+    <Folder Include="Events\Commands\TestUtils\" />
+    <Folder Include="TestUtils\" />
+    <Folder Include="TestUtils\Constants\" />
+    <Folder Include="Events\Querries\" />
+    <Folder Include="Events\Querries\GetEventById\" />
+    <Folder Include="TestUtils\Models\" />
+    <Folder Include="Events\Commands\UpdateEvent\" />
+    <Folder Include="Events\Commands\CreateEvent\TestUtils\" />
+    <Folder Include="Events\Commands\UpdateEvent\TestUtils\" />
+    <Folder Include="Events\Commands\DeleteEvent\" />
+    <Folder Include="Events\Commands\DeleteEvent\TestUtils\" />
+    <Folder Include="Events\Querries\GetAllEvents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventBooking.Application\EventBooking.Application.csproj" />
+    <ProjectReference Include="..\EventBooking.Domain\EventBooking.Domain.csproj" />
+  </ItemGroup>
+</Project>

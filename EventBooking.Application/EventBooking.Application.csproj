@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Common\Interfaces\" />
+    <None Remove="Common\Interfaces\Persistence\" />
+    <None Remove="Common\Interfaces\Persistence\Repositories\" />
+    <None Remove="Common\Interfaces\Services\" />
+    <None Remove="Common\Models\" />
+    <None Remove="Common\Models\Users\" />
+    <None Remove="Common\Behaviours\" />
+    <None Remove="Events\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="Common\Interfaces\Persistence\" />
+    <Folder Include="Common\Interfaces\Persistence\Repositories\" />
+    <Folder Include="Common\Interfaces\Services\" />
+    <Folder Include="Common\Models\" />
+    <Folder Include="Common\Models\Users\" />
+    <Folder Include="Common\Behaviours\" />
+    <Folder Include="Events\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="1.2.1" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventBooking.Domain\EventBooking.Domain.csproj" />
+  </ItemGroup>
+</Project>
