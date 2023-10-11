@@ -49,8 +49,6 @@ public class GetAllEventsQueryHandlerTest
         var response = _mockMapper.Object.Map<List<EventDto>>(result.Value);
         // Assert
         result.IsError.Should().BeFalse();
-        //response.Should().HaveCount(1);
-        //response.Should().Contain(item => item.Id == EventDtoUtils.CreateEventDto().Id);
         _mockEventRepository.Verify(m => m.GetAllAsync(), Times.Once);
     }
 
